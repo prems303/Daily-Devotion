@@ -1,14 +1,32 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8">
-    <title>Daily Devotion</title>
-  </head>
-  <body>
-    <script src="http://labs.bible.org/api/?passage=random"></script>
+<head>
+  <meta charset="utf-8">
+  <title>Daily Devotion</title>
+  <style>
+  .flex-container {
+    height: 50%;
+    margin: 0;
+    padding: 0;
+  }
+  </style>
+  <!--<script src="http://labs.bible.org/api/?passage=random"></script>-->
 
-    <link rel="stylesheet" href="
-https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css"
+  <a id='devotional' href='http://labs.bible.org/api/?passage=random'></a>
 
-  </body>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
+  <link rel="stylesheet" type="text/css" href="../style.css">
+</head>
+<body>
+  {{#each Devotion}}
+  <ul>
+    <ul class = "flex-container1">
+      <li class = "flex-item"> {{Devotion}} <a id='devotional' href="{{Source.Url}}"> - {{Source.Devotion}}</a> </li>
+    </ul>
+    <ul class = "flex-container2">
+      <li class = "flex-item">Button</li>
+    </ul>
+  </ul>
+  {{/each}}
+</body>
 </html>

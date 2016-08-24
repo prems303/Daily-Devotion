@@ -19,7 +19,6 @@ app.get("/", function (req, res) {
   res.render('index', server)
 })
 
-
 var PORT = process.env.PORT || 3000
 app.listen( PORT, function () {
   console.log('The server is running on port: ', PORT)
