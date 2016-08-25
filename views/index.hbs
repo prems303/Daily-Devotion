@@ -10,23 +10,19 @@
     padding: 0;
   }
   </style>
-  <!--<script src="http://labs.bible.org/api/?passage=random"></script>-->
 
-  <a id='devotional' href='http://labs.bible.org/api/?passage=random'></a>
-
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css">
   <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 <body>
-  {{#each Devotion}}
+
   <ul>
     <ul class = "flex-container1">
-      <li class = "flex-item"> {{Devotion}} <a id='devotional' href="{{Source.Url}}"> - {{Source.Devotion}}</a> </li>
+      <li class = "flex-item"> {{devotion}} </li>
     </ul>
     <ul class = "flex-container2">
       <li class = "flex-item">Button</li>
     </ul>
   </ul>
-  {{/each}}
+
 </body>
 </html>

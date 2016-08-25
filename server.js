@@ -1,6 +1,7 @@
 var hbs = require('express-handlebars')
 var path = require('path')
 var express = require('express')
+var request = require('superagent')
 
 var app = express()
 
@@ -13,10 +14,13 @@ app.set('views', path.join(__dirname, 'views'))
 
 
 app.get("/", function (req, res) {
-  var server = {
+  var url = 'http://labs.bible.org/api/?passage=random'
+  request.get(url, function(err, response){
+    //console.log (response.text)
+    if (err) throw err
+      res.render('index', {devotion: response.text})
+  })
 
-  }
-  res.render('index', server)
 })
 
 var PORT = process.env.PORT || 3000

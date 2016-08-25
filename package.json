@@ -22,5 +22,7 @@
     "express-handlebars": "^3.0.0",
     "nodemon": "^1.10.0"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "superagent": "^2.2.0"
+  }
 }
