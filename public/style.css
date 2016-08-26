@@ -1,0 +1,26 @@
+ul{
+  list-style: none;
+}
+
+body{
+background-image: url('../praising.jpg');
+background-repeat: no-repeat;
+display: block;
+margin: auto;
+width: 100%;
+}
+
+.flex-container1 {
+height: 35%;
+width: 50.5%;
+text-align: center;
+font-size: 2em;
+color: red;
+}
+
+.flex-container2 {
+width: 97.5%;
+text-align: center;
+font-size: 2em;
+color: green;
+}
